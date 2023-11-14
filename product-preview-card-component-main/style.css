@@ -1,0 +1,151 @@
+:root{
+--primaryFont:'Montserrat', sans-serif;
+--secendaryFont:'Fraunces', serif;
+  
+--darkCyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+--veryDarkBlue: hsl(212, 21%, 14%);
+--darkgrayishblue: hsl(228, 12%, 48%);
+--whiteColor: hsl(0, 0%, 100%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,body{
+  height:100%;
+}
+body{
+  font-family: var(--primaryFont);
+  font-weight: 300px;
+  background: var(--cream);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--secendaryFont);
+  font-weight: 700px;
+  margin-bottom: 15px;
+}
+p{
+  font-weight: 300px;
+  margin-bottom: 15px;
+}
+img{
+ max-width: 300px;
+  height: auto;
+}
+
+.card{
+  width: 600px;
+  display: flex;
+}
+.card_img{
+  flex-basis: 50%;
+}
+ .card_img img.desktop{
+  display: block;
+  border-radius: 10px 0 0 10px;
+}
+ .card_img img.mobile{
+  display: none;
+  border-radius: 10px 10px 0 0;
+  
+}
+.card-body{
+  flex-basis: 50%;
+  background: var(--whiteColor);
+  border-radius: 0 10px 10px 0;
+  padding: 30px;
+  width: 300px;
+}
+.card-body h2{
+  color: var(--veryDarkBlue);
+}
+.card-body h6{
+  color: var(--darkgrayishblue);
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.card-body p{
+  font-size: 14px;
+  color: var(--darkgrayishblue);
+  line-height: 1.5rem;
+}
+p.price{
+  font-family: var(--secendaryFont);
+  color: var(--darkgrayishblue);
+  font-size: 32px;
+  
+}
+p.price span{
+  font-family: var(--primaryFont);
+  color: var(--darkgrayishblue);
+  font-size: 14px;
+  text-decoration: line-through;
+  position: relative;
+  top: -8px; 
+  
+}
+.card-body button{
+  background: var(--darkCyan);
+  border: 0;
+  width: 100%;
+  padding: 15px;
+  color: var(--whiteColor);
+  font-weight: 500px;
+}
+.card-body button img{
+  display: inline-block;
+  padding-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+
+
+/* mobile design */
+@media only screen and (max-width: 600px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 90%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .card_img img.desktop {
+    display: none;
+  }
+
+  .card_img img.mobile {
+    display: block;
+  }
+
+  .card .card-body {
+    border-radius: 0 0 10px 10px;
+  }
+
+  
+}
+
+  
+
+
+
+
+
+
+
+
